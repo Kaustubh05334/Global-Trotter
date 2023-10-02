@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% block mymessage %}
+    <div class="mb-5 py-5 mt-5">
+        <form method="post" class="row col-lg-3 col-md-6 col-sm-11 col-11 mx-auto border rounded p-4">
+            {% csrf_token %}
+            {% if error %}
+                <p class="text-danger text-center">{{error}}</p>
+            {% endif %}
+            {{ form.as_p }}
+            <div class="text-center mt-2">
+                <button type="submit" class="btn btn-primary w-100 color_for_buttons">Login</button>
+                <button type="submit" class="btn btn-primary w-100 color_for_buttons mt-2"><a href="{% provider_login_url 'google' method = 'oauth2' %}" class="text-light ">Sign in with Google</a></button>
+            </div>
+            <p class="text-center mt-3">If not registered, <a href="{% url 'register_user' %}" class="text-decoration-none text_color">Sign Up</a></p> 
+        </form>
+    </div>
+{% endblock %} 

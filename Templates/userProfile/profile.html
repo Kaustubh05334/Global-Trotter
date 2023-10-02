@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load filcus %}
+{% block mymessage %}
+
+    <div class="container row justify-content-center mx-auto mt-5">
+        <!-- Blogs -->
+        <div class="col-lg-8 col-md-10 col-sm-12 col-12" style="height:800px;overflow-y:auto;">
+            <h2 class="text-center text_color">Your Blogs</h1>
+                {% if page_obj %}
+                <p class=" m-0 text-center pb-2 fs-6" style="color:#04314b;">Scroll Down To See Your Blogs</p>
+                {% else %}
+                <p class=" m-0 text-center pb-2 fs-6" style="color:#04314b;">You currently have no blogs.</p>
+                {% endif %}
+            {% for blog_post in page_obj %}
+            <div>
+                <div class="border rounded p-2 mb-2 ">
+                      <div>
+                          {% if blog_post.thumbnail %}
+                              <img src="{{ blog_post.thumbnail.url }}" data-enlargable style="min-height:300px !important;width:100%;height:500px;cursor: pointer;object-position: center; object-fit: cover;"  class="w-100 rounded"   alt="">
+                          {% endif %}
+                      </div>
+                      <p class="m-1 text_color mt-4" style="margin-left: 14%;font-size: 30px;">{{ blog_post.title }}</p>
+                      <p class="m-1 ">{{ blog_post.content|truncatewords:30|safe }}</p>
+                      <h3 class="m-1 text_color " style="font-size: 22px;">
+                          {{ blog_post.location }}
+                      </h3>
+                      <p class="m-1">Created at: {{ blog_post.created_at|timesince }} ago</p>
+                      <!-- JavaScript For Enlarging tHe Picture -->
+        <script>
+            $('img[data-enlargable]').addClass('img-enlargable').click(function(){
+            var src = $(this).attr('src');
+            $('<div>').css({
+        background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+        backgroundSize: 'contain',
+        width:'100%', height:'100%',
+        position:'fixed',
+        zIndex:'10000',
+        top:'0', left:'0',
+        cursor: 'zoom-out'
+    }).click(function(){
+        $(this).remove();
+    }).appendTo('body');
+});
+        </script>
+        <!-- JavaScript For Enlarging tHe Picture End-->
+                    <!-- Display other relevant information from the BlogPost model -->
+                      <div class="text-center pt-3 col-lg-8 col-md-10 col-sm-11 col-11  mx-auto">
+                          {% if blog_post.status == 1 %}
+                          <a href="{% url 'blog_details' blog_post.title|cuslug blog_post.id %}" class="btn btn-primary w-100  my-1 color_for_buttons">Read More</a>
+                          {% else %}
+                          <a href="{% url 'preview_blog' blog_post.title|cuslug blog_post.id %}" class="btn btn-primary w-100  my-1 color_for_buttons">Edit Blog</a>
+                          {% endif %}
+                          <a href="{% url 'delete_blog' blog_post.id %}" class="text-light"><button type="button" class="btn mx-auto btn-primary w-100 my-1 color_for_buttons" data-bs-toggle="modal" data-bs-target="#exampleModal" demo modal>Delete Blog</button></a>
+                      </div>
+                  </div>
+                </div>
+                
+                {% endfor %}
+                
+        {% if page_obj.paginator.num_pages > 1 %}
+        <div class="text-center">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    </li>
+                {% endif %}
+                {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                        <li class="page-item active">
+                            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                {% endif %}
+                
+            </ul>
+        </div>
+        {% endif %}
+        </div>
+        
+        <!-- Profile -->
+        <div class="col-lg-4 col-md-10 col-sm-12 border rounded col-12" style="margin-top:76px;">
+            <div class="pt-4 w-100">
+                <div class="border rounded-circle mx-auto" style="width:170px;height:170px;">
+                    {% if profile.profile_image %}
+                    <img src="{{ profile.profile_image.url }}" width="100%" height="100%" alt="Profile Picture" style="border-radius: 60%; object-fit: fill;">
+                    {% elif user.socialaccount_set.all.0.extra_data.picture %}
+                    <img src="{{ user.socialaccount_set.all.0.extra_data.picture }}" width="100%" height="100%" alt="Profile Picture" style="border-radius: 60%; object-fit: fill;">
+                    {% else %}
+                    <img src="{% static 'default_profile_image.png' %}" width="100%" height="100%" alt="Profile Picture" style="border-radius: 60%; object-fit: fill;">
+                    {% endif %}
+                </div> 
+                    {% if user.username %}
+                    <p class="text-center mt-3" style="font-size: 20px; font-weight: bold;">{{ user.username }}</p>
+                    {% else %}
+                    <p class="text-center mt-3" style="font-size: 20px; font-weight: bold;">{{ user.socialaccount_set.all.0.extra_data.name }}</p>
+                    {% endif %}
+
+                <p class="text-center" style="font-size: 20px;">{{ profile.mobile_number }}</p>
+                <p class="text-center" style="font-size: 20px;">{{ profile.user_bio }}</p>
+                <div class="d-flex justify-content-center my-2"> 
+                    <a class="mx-1" href="{{ profile.instagram_link }}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" width="40px" alt=""></a>
+                    <a class="mx-1" href="{{ profile.facebook_link }}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png" width="40px" alt=""></a>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="{% url 'profile_page' %}" class="btn btn-primary w-75 mx-auto color_for_buttons">Edit Profile</a>
+                </div>
+            </div>          
+            <!-- Notifications -->
+            <a href="{% url 'all_notf' %}" >
+                <div class="border rounded mb-3 p-3 mt-3 w-100">
+                    <h3 class="text-center">Notifications</h3>
+                    {% for notf in notifications %}
+                    <div class="d-flex p my-2 rounded ">
+                        <p class="text_color m-0 my-1 mx-auto"><a href="{{notf.link}}">{{notf.message}}</a></p>
+                    </div>
+                    {% endfor %}<br>
+                    <div class="text-center col-lg-8 col-md-10 col-sm-12 col-12  mx-auto">
+                        <a href="{% url 'all_notf' %}" class="btn btn-primary w-100 mx-auto color_for_buttons mt-2">Show All Notification</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %} 

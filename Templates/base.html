@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  {% block headblock%}{% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Trotter</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@1&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@1,300&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- fontawesome kit id -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">  
+    <!-- Add jQuery and Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                cabinetGrotesk: "'Cabinet Grotesk', san-serif",
+              }
+            }
+          }
+        }
+      </script>
+      <!-- Css -->
+    <style>
+      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+      *{
+        font-family: 'Alumni Sans Inline One', cursive !important;
+        font-family: 'Josefin Sans', sans-serif !important;
+        font-family: 'Lato', sans-serif !important;
+        font-family: 'Roboto', sans-serif !important;
+      }
+        body{background: #f8f8fa;}
+        .color_for_buttons{
+          background-color:  #074b71;
+        }
+        .text_color{
+          color:  #074b71;
+        }
+        body{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .background{
+            background-image:"https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg" ;
+        }
+                    /* Style for carousel container */
+                    .carousel1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        margin: 20px auto;
+        width: 80%;
+        height: 300px;
+        position: relative;
+      }
+
+      /* Style for each card */
+      #crd {
+        
+        background-color: #ccc;
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      /* Style for active card */
+      #crd.active {
+        transform: scale(1.1);
+        z-index: 1;
+      }
+    .event-list .event-item {
+        padding: 1rem 1.9rem;
+        margin: 0 0.9375rem 1.875rem 0.9375rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+        -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    }
+    
+    .event-list .event-item.featured {
+        border: 1.5px solid #68cbd7;
+    }
+    
+    .event-list .event-item .event-schedule {
+        color: #3c4142;
+        margin-bottom: 0.625rem;
+    }
+    
+    .event-list .event-item .event-schedule .event-icon {
+        stroke-width: 1px;
+        width: 1.125rem;
+        height: 1.125rem;
+        margin: 0.6875rem 1rem 0 0;
+    }
+    
+    .event-list .event-item .event-schedule .event-day {
+        font-size: 70px;
+        font-weight: 200;
+        margin-right: 1rem;
+        line-height: 100%;
+    }
+    
+    .event-list .event-item .event-schedule .event-month-time {
+        font-weight: 200;
+        font-size: 22px;
+        display: flex;
+        line-height: 118%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .event-list .event-item .event-schedule .event-month-time span {
+        display: block;
+        text-transform: uppercase;
+    }
+    
+    .event-list .event-item .event-title {
+        display: block;
+        margin-bottom: 0.625rem;
+        font-weight: 300;
+        color: #3c4142;
+    }
+    
+    .event-list .event-item .event-title:hover {
+        color: #68cbd7;
+        text-decoration: none;
+    }
+    
+    .event-list .event-item .event-content {
+        color:  #04314b;
+        margin-bottom: 0.625rem;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    
+    .event-list .event-item .event-participants {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .event-list .event-item .event-participants .event-user {
+        width: 48px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+    }
+    
+    .event-list .event-item .event-participants .event-user .event-user-inital {
+        font-size: 13px;
+        line-height: 100%;
+    }
+    
+    .event-list .event-item .event-participants {
+        display: flex !important;
+    }
+    
+    .event-list .event-item .event-participants .event-user .event-user-pic {
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+    .event-list .event-item .event-participants li + li {
+        margin-left: -10px;
+    }
+    
+    
+    .event-list .event-item .event-participants {
+        flex-direction: row !important;
+    }
+    .event-list .event-item .event-participants {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .bg-soft-primary {
+        background-color: #dce3fa;
+    }
+    
+    .bg-soft-danger {
+        background-color: #fedce0;
+    }
+    
+    .bg-soft-info {
+        background-color: #d7efff;
+    }
+    
+    .bg-soft-success {
+        background-color: #d1f6f2;
+    }
+    
+    .event-list .event-item .event-schedule, .event-list .event-item .event-participants{
+        display: flex !important;
+    }
+    
+    
+    .owl-prev {
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      margin-left: 0;
+      display: block !important;
+      background-image: linear-gradient(to right, #F4F7FD, transparent) !important;
+    }
+    
+    .owl-prev .owl-nav-wrapper {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .owl-prev .owl-nav-wrapper svg, .owl-prev .owl-nav-wrapper i {
+      color: #ffffff;
+      width: 20px;
+      height: 20px;
+    }
+    
+    .owl-next {
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block !important;
+      background-image: linear-gradient(to right, transparent, #F4F7FD) !important;
+    }
+    
+    .owl-next .owl-nav-wrapper {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+    }
+    
+    .owl-next .owl-nav-wrapper svg, .owl-next .owl-nav-wrapper i {
+      color: #ffffff;
+      width: 20px;
+      height: 20px;
+    }
+    
+    .owl-dots {
+      text-align: center;
+      margin-top: .5rem;
+    }
+    
+    .owl-dots .owl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: #cbcbcb !important;
+      margin-right: 5px;
+      display: inline-block;
+    }
+    
+    .owl-dots .owl-dot.active {
+      background: #757575 !important;
+    }
+    
+    .text-primary, .task-list-wrapper .completed .remove {
+        color: #4e73e5 !important;
+    }
+        .Footer-class{
+          font-weight: 400;
+          line-height: 18px;    
+          font-size: 13px;    
+          margin: 8px 0;
+          text-decoration: none;
+          color: black
+        }
+
+
+
+/* CSS for the navbar */
+nav{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 70px;
+  background: #074b71;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+nav .navbar{
+  height: 100%;
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0 50px;
+}
+.navbar .logo a{
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav .navbar .nav-links{
+  line-height: 70px;
+  height: 100%;
+}
+nav .navbar .links{
+  display: flex;
+}
+nav .navbar .links li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 14px;
+}
+nav .navbar .links li a{
+  height: 100%;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow{
+  transform: rotate(180deg);
+  }
+
+nav .navbar .links li .arrow{
+  height: 100%;
+  width: 22px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+nav .navbar .links li .sub-menu{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  line-height: 40px;
+  background: #074b71;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  display: none;
+  z-index: 2;
+}
+nav .navbar .links li:hover .htmlCss-sub-menu,
+nav .navbar .links li:hover .js-sub-menu{
+  display: block;
+}
+.navbar .links li .sub-menu li{
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar .links li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.navbar .links li .sub-menu .more-arrow{
+  line-height: 40px;
+}
+.navbar .links li .sub-menu .more-sub-menu{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-radius: 0 4px 4px 4px;
+  z-index: 1;
+  display: none;
+}
+.links li .sub-menu .more:hover .more-sub-menu{
+  display: block;
+}
+.navbar .search-box{
+  position: relative;
+   height: 40px;
+  width: 40px;
+}
+.navbar .search-box i{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar .search-box .input-box{
+  position: absolute;
+  right: calc(100% - 40px);
+  top: 80px;
+  height: 60px;
+  width: 300px;
+  background: #074b71;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.navbar.showInput .search-box .input-box{
+  top: 65px;
+  opacity: 1;
+  pointer-events: auto;
+  background: #074b71;
+}
+.search-box .input-box::before{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #074b71;
+  right: 10px;
+  top: -6px;
+  transform: rotate(45deg);
+}
+.search-box .input-box input{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  height: 35px;
+  width: 280px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  border: none;
+}
+.navbar .nav-links .sidebar-logo{
+  display: none;
+}
+.navbar .bx-menu{
+  display: none;
+}
+@media (max-width:920px) {
+  nav .navbar{
+    max-width: 100%;
+    padding: 0 25px;
+  }
+
+  nav .navbar .logo a{
+    font-size: 27px;
+  }
+  nav .navbar .links li{
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+  nav .navbar .links li a{
+    font-size: 15px;
+  }
+}
+@media (max-width:800px){
+  .navbar .bx-menu{
+    display: block;
+  }
+  nav .navbar .nav-links{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    max-width: 270px;
+    width: 100%;
+    background:  #074b71;
+    line-height: 40px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  .navbar .nav-links .sidebar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar-logo .logo-name{
+    font-size: 25px;
+    color: #fff;
+  }
+    .sidebar-logo  i,
+    .navbar .bx-menu{
+      font-size: 25px;
+      color: #fff;
+    }
+  nav .navbar .links{
+    display: block;
+    margin-top: 20px;
+  }
+  nav .navbar .links li .arrow{
+    line-height: 40px;
+  }
+nav .navbar .links li{
+    display: block;
+  }
+nav .navbar .links li .sub-menu{
+  position: relative;
+  top: 0;
+  box-shadow: none;
+  display: block;
+}
+nav .navbar .links li .sub-menu li{
+  border-bottom: none;
+
+}
+.navbar .links li .sub-menu .more-sub-menu{
+  display: block;
+  position: relative;
+  left: 0;
+}
+.navbar .links li .sub-menu .more-sub-menu li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow{
+  transform: rotate(0deg);
+  }
+  .navbar .links li .sub-menu .more-sub-menu{
+    display: block;
+  }
+  .navbar .links li .sub-menu .more span{
+    display: flex;
+    align-items: center;
+  }
+
+  .links li .sub-menu .more:hover .more-sub-menu{
+    display: block;
+  }
+  nav .navbar .links li:hover .htmlCss-sub-menu,
+  nav .navbar .links li:hover .js-sub-menu{
+    display: block;
+  }
+.navbar .nav-links.show1 .links .htmlCss-sub-menu,
+  .navbar .nav-links.show3 .links .js-sub-menu,
+  .navbar .nav-links.show2 .links .more .more-sub-menu{
+      display: block;
+    }
+    .navbar .nav-links.show1 .links .htmlcss-arrow,
+    .navbar .nav-links.show3 .links .js-arrow{
+        transform: rotate(180deg);
+}
+    .navbar .nav-links.show2 .links .more-arrow{
+      transform: rotate(90deg);
+    }
+}
+@media (max-width:370px){
+  nav .navbar .nav-links{
+  max-width: 100%;
+} 
+}
+/* CSS for the navbar End */
+
+    /* Animated Text For Homepage */
+    .flicker {
+      font-size: 6rem;
+      /* margin: 1rem auto; */
+      color: #fffbfbc4;
+      background: -webkit-gradient(linear, left top, right top, from(#fc0606), to(#c42c2c), color-stop(0.8, #e90f0f)) no-repeat;
+      /* background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat; */
+      background-size: 110px 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: flick 3s infinite;
+      text-shadow: 1px 1px 1px 1px white ;
+    }
+    @keyframes flick {
+      0% {
+        background-position: top left;
+      }
+      100% {
+        background-position: top right;
+      }
+    }
+    /* Endof Animated Text For Homepage */
+/*************footer End*****************/
+.new_footer_area {
+    background: #fbfbfd;
+}
+.new_footer_top {
+    padding: 70px 0px 270px;
+    position: relative;
+      overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+.btn_get_two:hover {
+    background: transparent;
+    color: #074b71;
+}
+.btn_get:hover {
+    color: #074b71;
+    background: #074b71;
+    border-color: #074b71;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #074b71;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.ti-facebook:before {
+    content: "\e741";
+}
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+.ti-vimeo-alt:before {
+    content: "\e74a";
+}
+.ti-pinterest:before {
+    content: "\e731";
+}
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #074b71;
+    border-color: #074b71;
+    color: #fff;
+}
+.btn_get_two:hover {
+    background: transparent;
+    color: #074b71;
+}
+.new_footer_top .f_social_icon a:hover {
+    background: #074b71;
+    border-color: #074b71;
+    color:white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #074b71;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+  background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+  background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/*************footer End*****************/
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #04314b 0%,
+    #04314b 29%,
+    #ffffff 67%,
+    #6460ae 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.card{
+  transition: 0.4s;
+}
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+a{
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+    width: 150px;
+    height: 150px;
+}
+svg {
+    width: 100px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+}
+#btnOff,
+#btnOn {
+    position: absolute;
+    z-index: 1;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #04314b;
+}
+#btnOn {
+    background: red;
+    opacity: 0;
+    pointer-events: none;
+}
+/*  */
+@media (max-width:720px) {
+  .approval_page_font_size{
+    font-size:3vw !important ;
+  }
+@media (max-width:720px) {
+  .Responsive_Font_For_Notifications{
+    font-size:15px !important ;
+  }}
+@media (max-width:500px) {
+  .responsive_Styling_for_footer{
+    margin-left:15px !important ;
+  }}
+@media (max-width:780px) {
+  .banner_Responsive_text{
+    font-size:5vw !important ;
+    left: 2% !important;
+  }}
+@media (max-width:450px) {
+  .banner_Responsive_text{
+    font-size:8vw !important ;
+    left: 2% !important;
+  }}
+@media (max-width:500px) {
+  .Responsive_text_for_Blog_Details_text{
+    font-size:14px !important ;
+  }}
+@media (max-width:500px) {
+  .Responsive_text_for_Blog_Details_heading{
+    font-size:14px !important ;
+  }}
+}
+.fab-container{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  z-index:999;
+  cursor:pointer}
+  .fab-icon-holder{
+    width:50px;
+    height:50px;
+    border-radius:100%;
+    background:#04314b;
+    box-shadow:0 6px 20px rgba(0,0,0,.2)}
+    .fab-icon-holder i{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100%;
+      font-style:25px;
+      color:#fff}
+      .fab{
+        width:55px;
+        height:55px;
+        background:#04314b;
+        transform:rotate(0);
+        transition:all .4s}
+      .fab:hover{transform:rotate(270deg)}.fab-options{list-style-type:none;margin:0;position:absolute;bottom:70px;right:0;opacity:0;transition:all .3s ease;transform:scale(0);transform-origin:80% bottom}.fab-options:hover,.fab:hover+.fab-options{opacity:1;transform:scale(1)}.fab-options .fab-li{display:flex;justify-content:flex-end;padding:5px}.fab-label{padding:2px 5px;align-self:center;user-select:none;white-space:nowrap;border-radius:3px;font-size:16px;background:#666;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.2);margin-right:10px}.floating-link{text-decoration:none}
+    
+        pre{white-space: pre-wrap;}
+ 
+/* Adjustments for toggleable comments */
+/* Adjustment for Internet Explorer */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Resets cursor, and removes prompt text on Internet Explorer */
+    .comment-heading {
+        cursor: default;
+    }
+    details.comment[open] .comment-heading::after,
+    details.comment:not([open]) .comment-heading::after {
+        content: " ";
+    }
+}
+/* Styling the reply to comment form */
+
+/* Comments Styling End */
+/*Eliminates padding, centers the thumbnail */
+
+/* Styles the thumbnail */
+
+a.lightbox img {
+height: 350px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+margin: 94px 20px 20px 20px;
+}
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+/* width: 100%; */
+opacity: 0;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+ 
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+  overflow:scroll;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0;
+}
+    /* Comments Styling */
+
+    .comment-thread {
+        width: 700px;
+        max-width: 100%;
+        margin: auto;
+        padding: 0 30px;
+        border: 1px solid rgb(218, 208, 208);
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+    .m-0 {
+        margin: 0;
+    }
+    /* Comment */
+
+    .comment {
+        position: relative;
+        margin: 20px auto;
+    }
+    .comment-heading {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .comment-info {
+        color: rgba(0, 0, 0, 0.5);
+        margin-left: 10px;
+    }
+    .comment-author {
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .comment-author:hover {
+        text-decoration: underline;
+    }
+    .replies {
+        margin-left: 20px;
+    }
+    /* Adjustments for the comment border links */
+
+    .comment-body {
+        padding: 0 20px;
+        padding-left: 28px;
+    }
+    .replies {
+        margin-left: 28px;
+    }
+
+    /* Adjustments for toggleable comments */
+
+
+    /* Adjustment for Internet Explorer */
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        /* Resets cursor, and removes prompt text on Internet Explorer */
+        .comment-heading {
+            cursor: default;
+        }
+        details.comment[open] .comment-heading::after,
+        details.comment:not([open]) .comment-heading::after {
+            content: " ";
+        }
+    }
+
+    /* Styling the reply to comment form */
+
+    .reply-form textarea {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 16px;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    /* Comments Styling End */
+
+    @media (max-width:400px) {
+      .media_400_displayblock_comments{
+        display: block !important;
+      }
+    }
+    /* Style For Hotels Card */
+    
+    /* Style For Hotels Card End */
+</style>
+<!-- Search -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3xpvDInSi1HXTuvUlxjkK1IuP7W2UzPI&libraries=places"></script>
+ <script>
+     function initialize() {
+         var input = document.getElementById('search');
+         var autocomplete = new google.maps.places.Autocomplete(input);
+     }
+     google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<!-- Search End-->
+</head>
+<body style="scrollbar-width: none;">
+  <!-- Navbar Start -->
+   <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'><i class="bi bi-list"></i></i>
+      <div class="logo"><a href="{% url 'home' %}">Global Trotter</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">Global Trotter</span>
+          <i class="bi bi-x"></i>
+        </div>
+        <ul class="links">
+          <li><a href="{% url 'travel' %}">Destination</a></li>
+          <li><a href="{% url 'travel' %}">Explore</a></li>
+          <li><a href="{% url 'airline' %}">Aviation</a></li>         
+          <li><a href="{% url 'lifestyle' %}">LifeStyle</a></li>
+          <li><a href="{% url 'hotel' %}">Hotels</a></li>
+
+          <li>
+            <a href="#">Publish Trip</a>
+            <i class="bi bi-chevron-down ms-2 text-light"></i>
+            <ul class="htmlCss-sub-menu sub-menu p-0">
+              <li><a href="{% url 'blog_post_page' %}">Create New Blog</a></li>
+             
+            </ul>
+          </li>
+          <li>
+            <a href="#">  
+              {% if user.is_authenticated %}
+                {{ request.user.username }}
+              {% else %}
+                 LogIn
+              {% endif %}</a>
+              <i class="bi bi-chevron-down ms-2 text-light"></i>
+            <ul class="js-sub-menu sub-menu p-0" >
+              {% if user.is_authenticated %}
+                <li><a href="{% url 'profile_view' %}" class="px-3">Profile</a></li>
+              {% if user.is_superuser %}
+                <li><a href="{% url 'approve_page' %}" class="px-3">Approval</a></li>
+                <li><a class="px-3 text-light" href="{% url 'reports_list' %}">Reports</a></li>
+              {% endif %}
+              <li><a href="{% url 'change_password' %}">Change Password</a></li>
+                <li><a href="{% url 'logout_page' %}" class="px-3">Log Out</a></li>
+              {% else %}
+                <li><a href="{% url 'login_page' %}" class="px-3 ">Log In</a></li>
+              {% endif %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class="bi bi-search"></i>
+        <div class="input-box">
+           <form class="" role="search" method="get" action="{% url 'search' %}">
+              <input class="form-control me-2" size="50" type="search" placeholder="Search....." aria-label="Search" name="search" id="search">
+            </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script>
+    // search-box open close js code
+let navbar = document.querySelector(".navbar");
+let searchBox = document.querySelector(".search-box .bi-search");
+// let searchBoxCancel = document.querySelector(".search-box .bx-x");
+searchBox.addEventListener("click", ()=>{
+  navbar.classList.toggle("showInput");
+  if(navbar.classList.contains("showInput")){
+    searchBox.classList.replace("bi-search" ,"bi-x");
+  }else {
+    searchBox.classList.replace("bi-x" ,"bi-search");
+  }
+});
+// sidebar open close js code
+let navLinks = document.querySelector(".nav-links");
+let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+let menuCloseBtn = document.querySelector(".nav-links .bi-x");
+menuOpenBtn.onclick = function() {
+navLinks.style.left = "0";
+}
+menuCloseBtn.onclick = function() {
+navLinks.style.left = "-100%";
+}
+// sidebar submenu open close js code
+let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+htmlcssArrow.onclick = function() {
+ navLinks.classList.toggle("show1");
+}
+let moreArrow = document.querySelector(".more-arrow");
+moreArrow.onclick = function() {
+ navLinks.classList.toggle("show2");
+}
+let jsArrow = document.querySelector(".js-arrow");
+jsArrow.onclick = function() {
+ navLinks.classList.toggle("show3");
+}
+  </script>
+<!-- Navbar End -->
+{% block mymessage %}
+{% endblock %}
+<footer class="new_footer_area bg_color">
+  <div class="new_footer_top">
+      <div class="container">
+          <div class="row responsive_Styling_for_footer">
+              <div class="col-lg-3 col-md-6 col-12 col-sm-12 mb-3">
+                  <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                      <p>Don’t miss any updates of our Wanderlust and Blogs!</p>
+                      <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                        {% csrf_token %}
+                          <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                          <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                          <p class="mchimp-errmessage" style="display: none;"></p>
+                          <p class="mchimp-sucmessage" style="display: none;"></p>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-6 col-sm-6 mb-3">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">About Us</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="#">How It Works</a></li>
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Term & Conditions</a></li>
+                          <li><a href="#">Careers</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-6 col-sm-6 mb-3">
+                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Products</h3>
+                      <ul class="list-unstyled f_list">
+                          <li><a href="{% url 'travel' %}">Destination</a></li>
+                
+                          <li><a href="{% url 'travel' %}">Explore</a></li>
+                          <li><a href="{% url 'airline' %}">Aviation</a></li>         
+                          <li><a href="{% url 'lifestyle' %}">LifeStyle</a></li>
+                          <li><a href="{% url 'hotel' %}">Hotels</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 col-sm-12 mb-3">
+                  <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                      <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                      <div class="f_social_icon">
+                          <a href="#" target="_blank" class="bi bi-facebook"></a>
+                          <a href="#"    target="_blank" class="bi bi-instagram"></a>
+                          <a href="#" class="bi bi-twitter"  target="_blank" ></a>
+                          <a href="#"    target="_blank" class="bi bi-youtube"></a>
+                          <a href="#" class="bi bi-telegram"          target="_blank" ></a>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+      </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block mymessage %}
+
+{% if request.user == blog.user %}
+<div class="row">
+    <div class="border mb-5 py-5 col-lg-4 col-md-7 col-sm-11 col-11 rounded mx-auto text-center" style="margin-top: 150px;">
+        <p class="">Confirm Delete</p>
+        <p class="text-secondary">Are you sure you want to delete the blog "{{ blog.title }}"?</p>
+        <form class="pb-5 " method="post" action="{% url 'delete_blog' blog.id %}">
+            {% csrf_token %}
+            <button type="submit" class="color_for_buttons btn btn-primary w-50 my-2">Delete</button><br>
+            <span class="btn btn-primary w-50 color_for_buttons"><a class="text-decoration-none text-light" href="{% url 'profile_view' %}">Cancel</a></span>
+        </form>
+    </div>
+</div>
+{% else %}
+<div>
+    <h2 class="text-center mt-5 pt-5"> You are not authorized for this operation!</h2>
+    <div class="text-center mt-3">
+        <a href="{% url 'home' %}" class="text-decoration-none text-light"><button class="btn btn-primary color_for_buttons w-50 my-1"></button>Home</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %} 

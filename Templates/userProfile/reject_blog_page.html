@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load filcus %}
+{% load static %}
+{% block mymessage %}
+    <div class="border m-5 p-5 row col-lg-6 col-md-9 col-sm-11 col-11 mx-auto rounded"> 
+        <h1>Your Blog Titled {{bp.title}} has been rejected for the following reason {{ac.comment}}</h1>    
+        <div class="text-center">
+             <a href="{% url 'blog_details' bp.title|cuslug bp.id %}"><button class="btn btn-primary color_for_buttons w-50 mx-auto mt-3">Back to Blogs</button></a>
+        </div>
+    </div>
+{% endblock %}

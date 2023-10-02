@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% load filcus %}
+{% block headblock %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{blog.title}}">
+    <meta name="twitter:description" content="Check out this blog!">
+    <meta name="twitter:image" content="https://outofghar.com/media/{{blog.thumbnail}}">
+    <!-- Add this code in the <head> section of your HTML -->
+
+    <meta property="og:title" content="{{blog.title}}">
+    <meta property="og:description" content="Check out this blog!">
+    <meta property="og:image" content="https://outofghar.com/media/{{blog.thumbnail}}">
+    <meta property="og:url" content="https://outofghar.com{% url 'blog_details' blog.title|cuslug blog.id %}">
+    <meta property="og:type" content="article">
+
+{% endblock %}
+{% block mymessage %}
+{% load static %}
+
+<div class="row mx-auto mt-5">
+    <!-- Blog Start -->
+    <div class=" my-2 col-lg-7 col-md-8 col-sm-11 col-11  mx-auto p-4 border rounded ">
+        <p class=" m-0 ms-2 mb-1 fw-bold Responsive_text_for_Blog_Details_heading" style="font-size: 30px;">{{ blog.title }}</p>
+        <p class=" m-0 mb-2 Responsive_text_for_Blog_Details_heading" style="font-size: 18px;"><a href="#" class="text-dark"><i class="bi bi-geo-alt-fill"></i>  {{ blog.location|truncatewords:5 }}</a></p>
+        <!-- Profile -->
+    <div class="mx-auto px-4 my-1 py-1 border rounded d-flex justify-content-between">
+        <div class="d-flex rounded-circle" style="width:40px;height:40px;">
+            {% if blog.user.profile.profile_image %}
+            <img src="{{ blog.user.profile.profile_image.url }}" width="100%" height="100%" alt="Profile Picture" style="border-radius: 60%; object-fit: fill;">
+            {% elif blog.user.socialaccount_set.all.0.extra_data.picture %}
+            <img src="{{ blog.user.socialaccount_set.all.0.extra_data.picture }}" width="40" height="40" alt="Profile Picture" style="border-radius: 50%;">
+            {% else %}
+            <img src="{% static 'default_profile_image.png' %}" width="100%" height="100%" alt="Profile Picture" style="border-radius: 60%; object-fit: fill;">
+            {% endif %}
+            <p class="mt-1 ms-1 fw-bold">{{ blog.user.username }}</p>
+        </div> 
+        <!-- Like Button -->
+        <div class='like_area mt-1'>
+            {% if is_liked %}
+            <a href="{% url 'like_blog' blog.title|cuslug blog.id %}">
+                <i class="bi bi-heart-fill text-danger fs-5"></i>
+            </a>
+            {% else %}
+            <a href="{% url 'like_blog' blog.title|cuslug blog.id %}">
+                <i class="bi bi-heart text-danger fs-5"></i>
+            </a>
+            {% endif %} 
+            {{like_count}} 
+            
+            <i class="bi bi-eye-fill"></i>
+            {{views_count}}
+        </div>
+    </div>
+    <!-- Profile End -->
+       
+        <img data-enlargable id="img1"  style="width: 100%;min-height:300px !important;height:500px;cursor: pointer;object-position: center; object-fit: cover;"  src="{{ blog.thumbnail.url }}" onclick="show()" alt="My Image" class="rounded">
+        <p class=" Responsive_text_for_Blog_Details_text"><pre>{{ blog.content|safe }}</pre></p>
+
+        {% for subpost in blog.sub_posts.all %}
+            {% if subpost.subheading %}
+                <h3 class="Responsive_text_for_Blog_Details_heading fw-bold mt-3">{{ subpost.subheading }}</h3>
+            {% endif %}
+            {% if subpost.location %}
+                <h6 class=" Responsive_text_for_Blog_Details_heading" style="font-size: 18px;"><i class="bi bi-geo-alt-fill"></i>  {{ subpost.location|truncatewords:5 }}</h6>
+            {% endif %}
+            {% if subpost.image %}
+                <img data-enlargable id="img1" style="width:100%;min-height:300px !important;height:500px;cursor: pointer;object-position: center; object-fit: cover;" src="{{ subpost.image.url }}" onclick="show()" alt="My Image" class="rounded">
+            {% endif %}
+            {% if subpost.text %}
+                <p class="mt-3 Responsive_text_for_Blog_Details_text"><pre>{{ subpost.text }}</pre></p>
+            {% endif %}
+        {% endfor %}
+        <!-- JavaScript For Enlarging tHe Picture -->
+        <script>
+            $('img[data-enlargable]').addClass('img-enlargable').click(function(){
+            var src = $(this).attr('src');
+            $('<div>').css({
+        background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+        backgroundSize: 'contain',
+        width:'100%', height:'100%',
+        position:'fixed',
+        zIndex:'10000',
+        top:'0', left:'0',
+        cursor: 'zoom-out'
+    }).click(function(){
+        $(this).remove();
+    }).appendTo('body');
+});
+        </script>
+        <!-- JavaScript For Enlarging tHe Picture End-->
+        <!-- Share -->
+<div class="fab-container">
+        <div class="fab fab-icon-holder">
+            <i class="bi bi-share-fill" aria-hidden="true"></i>
+        </div>
+
+        <ul class="fab-options">
+            <li class="fab-li">
+
+                <div class="fab-icon-holder">
+                    <a class="floating-link" href="https://www.facebook.com/sharer/sharer.php?u=https://outofghar.com{% url 'blog_details' blog.title|cuslug blog.id %}" target="_blank"> <i class="bi bi-facebook"></i></a>
+                </div>
+            </li>
+            <li class="fab-li">
+
+                <div class="fab-icon-holder">
+                    <a class="floating-link" href = "https://twitter.com/intent/tweet?url=https://outofghar.com{% url 'blog_details' blog.title|cuslug blog.id %}&text=Check%20out%20this%20blog!" target = "_blank"><i class="bi bi-twitter" aria-hidden="true"></i></a>
+                </div>
+            </li>
+            <li class="fab-li">
+
+                <div class="fab-icon-holder">
+                    <a class="floating-link" href = "whatsapp://send?text=Check%20out%20this%20blog:%20https://outofghar.com{% url 'blog_details' blog.title|cuslug blog.id %}" target = "_blank"> <i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                </div>
+            </li>
+            <li class="fab-li">
+
+                <div class="fab-icon-holder">
+                    <a class="floating-link" onclick="copyToClipboard('https://outofghar.com{% url 'blog_details' blog.title|cuslug blog.id %}')"><i class="bi bi-clipboard-check-fill" aria-hidden="true"></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+       <!-- Share End-->
+        <script>
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text);
+              }
+            function classToggle() {
+                const divElement = document.getElementById('share-list');
+                if (divElement.classList.contains('d-none')) {
+                    divElement.classList.remove('d-none');
+                } else {
+                    divElement.classList.add('d-none');
+                }
+        }
+    </script>
+    
+    {% if blog.status == 0 %}
+            {% if request.user.is_superuser %}
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary w-25 color_for_buttons">Submit</button>
+                </div>
+            </form>
+            {% endif %}
+    {% else %}
+      <!-- Comments -->
+        {% if request.user.is_anonymous is False %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="container">
+                {{ form.content }}
+                <div class="text-end mt-3">
+                    <input type="submit" value="Post" url="home" class="btn btn-primary color_for_buttons mx-auto">
+                </div>
+            </div>
+        </form>
+        {% else %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="container">
+                {{ form.content }}
+                <div class="text-end mt-3">
+                    <input type="submit" value="Post" url="home" class="btn btn-primary color_for_buttons mx-auto" disabled>
+                    <a href="{% url 'login_page' %}" class="btn btn-primary color_for_buttons mx-auto">Login to comment</a>
+                </div>
+            </div>
+        </form>
+        {% endif %}
+      {% endif %}
+
+      <div class="comment-thread">
+          {% for comment in comments %}
+          <details closed class="comment" id="comment{{ comment.id }}">
+              <summary>
+                  <p class="comment-heading m-0">
+                    {% if comment.user.profile.profile_image %}
+                      <img src="{{ comment.user.profile.profile_image.url }}" width="40" height="40" alt="Profile Picture" style="border-radius: 50%;">
+                      {% elif user.socialaccount_set.all.0.extra_data.picture %}
+                        <img src="{{ user.socialaccount_set.all.0.extra_data.picture }}" width="40" height="40" alt="Profile Picture" style="border-radius: 50%;">
+                    {% else %}
+                        <img src="{% static 'default_profile_image.png' %}" width="40" height="40" alt="Profile Picture" style="border-radius: 50%;">
+                    {% endif %}
+                      <span class="comment-author ms-2">  {{ comment.user.username }}</span>
+                      <span class="comment-info">posted {{ comment.created_at|timesince }} ago</span>
+                  </p>
+              </summary>
+              <div class="comment-body">
+                  <p class="m-0 fs-5 ms-4 mb-2" style="word-wrap: break-word; word-break: break-all;">{{ comment.text }}</p>
+                  {% if request.user.is_anonymous is False %}
+                  <details class="comment m-0" closed>
+                    <summary class="comment-heading btn btn-primary color_for_buttons mb-3 py-1 ms-4" style="width: 55px;height: 25px;">Reply</summary>
+                      <form method="post">
+                          {% csrf_token %}
+                          <div class="container">
+                              {{ form.as_p }}
+                              <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                              <div class="text-end mt-3">
+                                  <button type="submit" class="btn btn-primary color_for_buttons">Post</button>
+                                  <button type="button" data-toggle="reply-form" data-target="reply-form" class="btn btn-primary color_for_buttons">Cancel</button>
+                              </div>
+                          </div>
+                      </form>
+                  </details>
+              {% endif %}
+
+              </div>
+              {% for reply in comment.replies.all %}
+              <div class="replies">
+                  <details closed class="comment" id="reply{{ reply.id }}">
+                      <summary>
+                          <p class="comment-heading m-0">
+                            {% if reply.user.profile.profile_image %}
+                            <img src="{{ reply.user.profile.profile_image.url }}" width="40" height="40" alt="Profile Picture" style="border-radius: 50%;">
+                            {% elif reply.user.socialaccount_set.all.0.extra_data.picture %}
+                              <img src="{{ reply.user.socialaccount_set.all.0.extra_data.picture }}" width="40" height="40" alt="Profile Picture" style="border-radius: 50%;">
+                          {% else %}
+                              <img src="{% static 'default_profile_image.png' %}" width="40" height="40" alt="Profile Picture" style="border-radius: 50%;">
+                          {% endif %}
+                              <span class="comment-author ms-2">  {{ reply.user.username }}</span>
+                              <span class="comment-info ">replied {{ reply.created_at|timesince }} ago</span>
+                          </p>
+                      </summary>
+                      <div class="comment-body">
+                          <p class="m-0 fs-5 ms-4 mb-2" style="word-wrap: break-word; word-break: break-all;">{{ reply.text }}</p>
+                      </div>
+                      {% if request.user.is_anonymous is False %}
+                      <details class="comment m-0" closed>
+                      <summary class="comment-heading  btn btn-primary color_for_buttons mb-3 py-1 ms-5" style="width: 55px;height: 25px;">Reply</summary>
+                      <form method="post">
+                          {% csrf_token %}
+                          <div class="container">
+                              {{ form.as_p }}
+                              <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                              <input type="hidden" name="reply_id" value="{{ reply.id }}">
+                              <div class="text-end mt-3">
+                                  <button type="submit" class="btn btn-primary color_for_buttons ">Post</button>
+                                  <button type="button" data-toggle="reply-form" data-target="reply-form" class="btn btn-primary color_for_buttons">Cancel</button>
+                              </div>
+                          </div>
+                      </form>
+                      </details>
+                      {% endif %}
+                  </details> 
+              </div>
+              {% endfor %}
+          </details>
+          {% endfor %}
+      </div>
+        <div class=" pt-2 row justify-content-center">
+        {% if request.user.is_anonymous is False %}
+            {% if request.user != blog.user %}
+            <button class="btn btn-primary color_for_buttons col-lg-7 col-md-7 col-sm-10 col-10 ">
+                <a href="{% url 'report_blog' blog.id %}" class="text-decoration-none text-light">Report This Blog</a>
+            </button><br>
+            {% else %}
+            {% endif %}
+            <button type="submit" class="btn btn-primary color_for_buttons col-lg-7 col-md-7 col-sm-10 col-10  mt-2">
+                <a href="{% url 'home' %}" class="text-decoration-none text-light">Back to Home</a>
+            </button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Javascript For Comments -->
+<script>
+    document.addEventListener(
+    "click",
+    function(event) {
+        var target = event.target;
+        var replyForm;
+        if (target.matches("[data-toggle='reply-form']")) {
+            replyForm = document.getElementById(target.getAttribute("data-target"));
+            replyForm.classList.toggle("d-none");
+        }
+    },
+    false
+);
+</script>
+{% endblock %}
+
+
+  

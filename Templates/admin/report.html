@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load filcus %}
+
+{% block mymessage %}
+<h1 class="text-center text-decoration-underline" style="margin-top: 50px;">Reports Awaiting Approval</h1>
+<div class="container">
+    <form method="POST" class="row">
+        {% csrf_token %}
+        <div class="form-floating col-lg-5 col-md-5 col-sm-11  col-11 mx-auto">
+            <select class="form-select" id="my_select" aria-label="Floating label select example" name="my_select">
+                <option value="all">All</option>
+                <option value="harassment">Harassment</option>
+                <option value="harmful">Harmful Content</option>
+                <option value="bullying">Bullying</option>
+                <option value="sexual">Sexual Content</option>
+                <option value="child_abuse">Child Abuse</option>
+                <option value="spam">Spam</option> 
+            </select>
+            <label for="floatingSelect">Filter</label>
+        </div>
+        <div class="text-center ">
+            <button type="submit" class="btn btn-primary color_for_buttons w-25 mt-3 mb-5">Filter</button>
+        </div>
+    </form>
+    <table class="table table-striped border-3 rounded mb-5 my-3 table-hover mt-4 w-100 ">
+        <thead style="background-color:#074b71;">
+            <tr>
+                <th scope="col" style='color:white;font-size: 1.5vw;' class="approval_page_font_size">Serial</th>
+                <th scope="col" style='color:white;font-size: 1.5vw;' class="approval_page_font_size">Blog Title</th>
+                <th scope="col" style='color:white;font-size: 1.5vw;' class="approval_page_font_size">Report Type</th>
+                <th scope="col" style='color:white;font-size: 1.5vw;' class="approval_page_font_size">Created On</th>
+                <th scope="col" style='color:white;font-size: 1.5vw;' class="approval_page_font_size">Blog Link</th>
+                <th scope="col" style='color:white;font-size: 1.5vw;' class="approval_page_font_size">Report Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for report in reports %}
+                <tr class="w-100">
+                    <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ forloop.counter }}</td>
+                    <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ report.blog.title|truncatewords:4 }}</td>
+                    <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ report.report_type }}</td>
+                    <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ report.created_at }}</td>
+                    <td style="font-size: 1.5vw;" class="approval_page_font_size"><a href="{% url 'blog_details' report.blog.title|cuslug report.blog.id %}">Link</a></td>
+                    <td style="font-size: 1.5vw;" class="approval_page_font_size"><a href="{% url 'unique_report' report.id %}">Link</a></td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No reports found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-center mb-5 row justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-primary color_for_buttons col-lg-2 col-10 mt-3">Back to Homepage</a>
+    </div>
+</div>
+{% endblock %} 

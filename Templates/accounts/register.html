@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% block mymessage %}
+  <div class="mb-5 py-5">
+    <h2 class="text-center">Create an Account</h2>
+    <form method="POST" action="{% url 'register_user' %}" class="mx-auto row col-lg-3 col-md-6 col-sm-11 col-11 border rounded p-4">
+      {% csrf_token %}
+      {% if error %}
+        <p class="text-danger text-center">{{ error }}</p>
+      {% endif %}
+      {{ form.as_p }}
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-100 color_for_buttons">Create User</button> <br>
+        <button type="submit" class="btn btn-primary w-100 color_for_buttons mt-2"><a href="{% provider_login_url 'google' method= 'oauth2' %}" class="text-light">Sign up with Google</a></button>
+      </div>
+      <p class="text-center mt-2">If already registered, <a href="{% url 'login_page' %}" class="text-decoration-none text_color">Sign in</a></p> 
+    </form>
+  </div>
+
+<!-- JavaScript  -->
+<script>
+    var inputField = document.getElementById("username");
+    var errorText = document.getElementById("errorText");
+    var submitButton = document.querySelector("button[type='submit']");
+    inputField.addEventListener("input", function() {
+      var inputValue = inputField.value;
+      var alphanumericPattern = /^[a-zA-Z0-9]+$/;
+      
+      if (!inputValue.match(alphanumericPattern)) {
+        // Value is invalid
+        inputField.classList.add("invalid");
+        errorText.textContent = "Invalid value. Only alphanumeric characters are allowed.";
+        submitButton.disabled = true; // Disable the submit button
+      } else {
+        // Value is valid
+        inputField.classList.remove("invalid");
+        errorText.textContent = "";
+        submitButton.disabled = false;
+      }
+    });
+</script>
+
+{% endblock %} 

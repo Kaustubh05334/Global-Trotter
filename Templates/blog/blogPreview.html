@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block mymessage %}
+
+<div class="mb-5 row text-center mx-auto mt-5">
+    <h1 class="text-center">Blog Preview</h1>
+    <form class="fade-in col-lg-8 col-md-6 col-sm-11 col-11 mx-auto border rounded p-4" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- Start Form -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control w-100"  placeholder="name@example.com" value="{{ blog.title }}" name="title">
+            <label for="floatingInput">Title</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control w-100" id="floatingPassword" placeholder="Password" name="location" value="{{ blog.location }}">
+          <label for="floatingPassword">Location</label>
+        </div>
+        <div class="form-floating my-2 ">
+          <input type="text" class="form-control py-5" name="content" style="box-sizing: content-box;" value ="{{blog.content|safe}}">
+          <label for="floatingPassword">Content</label>
+        </div>
+        <input type="file" name="thumbnail" class="form-control my-2 rounded" value="{{ blog.thumbnail }}"> 
+        {% if blog.thumbnail %}
+            <p>Thumbnail:</p>
+                <img src="{{ blog.thumbnail.url }}" alt="Thumbnail" width="100%" data-enlargable style="min-height:300px !important;width:100%;height:500px;cursor: pointer;object-position: center; object-fit: cover;" class="mx-auto border rounded">
+        {% endif %}
+            <hr>
+        <h4 class="">Sub_posts:</h4>
+        {% for sub_post in sub_posts %}
+          <div class="form-floating mb-3">
+              <input type="text" class="form-control"  placeholder="name@example.com" name="subheading{{ sub_post.id }}" value="{{ sub_post.subheading }}">
+              <label for="floatingInput">Subheading</label>
+          </div>
+          <div class="form-floating mb-3">
+              <input type="text" class="form-control"  placeholder="name@example.com" name="location{{sub_post.id }}" value="{{ sub_post.location }}">
+              <label for="floatingInput">Location</label>
+          </div>
+          <input type="file" name="image{{ sub_post.id }}" value="{{ sub_post.image }}" class="form-control my-2" >
+          {% if sub_post.image %}
+            <p>Sub-Image: <img src="{{sub_post.image.url }}" alt="Image" data-enlargable style="min-height:300px !important;width:100%;height:500px;cursor: pointer;object-position: center; object-fit: cover;" width="100%" class="border rounded"></p>
+          {% endif %}
+          
+          <div class="form-floating my-2 ">
+              <textarea class="form-control py-5"  placeholder="name@example.com" name="text{{ sub_post.id }}" style="box-sizing: content-box;width: 98%">{{sub_post.text|safe}}</textarea>
+              <label for="floatingPassword">Content</label>
+          </div>
+        {% endfor %}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary w-75 my-1 color_for_buttons">Save Blog</button>
+            <!-- <a href="{% url 'delete_blog' blog.id %}" class="text-decoration-none text-light"><button class="btn btn-primary color_for_buttons w-75 my-1">Delete Blog </button></a> -->
+            <a href="{% url 'home' %}" class="text-decoration-none text-light"><button class="btn btn-primary color_for_buttons w-75 my-1">Home </button></a>
+        </div>
+      </form>
+</div>
+<!-- JavaScript For Enlarging tHe Picture -->
+<script>
+  $('img[data-enlargable]').addClass('img-enlargable').click(function(){
+  var src = $(this).attr('src');
+  $('<div>').css({
+background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+backgroundSize: 'contain',
+width:'100%', height:'100%',
+position:'fixed',
+zIndex:'10000',
+top:'0', left:'0',
+cursor: 'zoom-out'
+}).click(function(){
+$(this).remove();
+}).appendTo('body');
+});
+
+function validateFileSize(input) {
+  const errorMessageElement = document.getElementById('error-message');
+  errorMessageElement.innerHTML = '';
+
+  if (input.files && input.files[0]) {
+      const fileSize = input.files[0].size; // in bytes
+      const maxSize = 8 * 1024 * 1024; // 8MB in bytes
+
+      if (fileSize > maxSize) {
+          errorMessageElement.innerHTML = 'Maximum file size is 8MB';
+          input.value = ''; // Reset the file input field
+      }
+  }
+}
+</script>
+<!-- JavaScript For Enlarging tHe Picture End-->
+
+        <!-- End Start Form -->
+{% endblock %} 

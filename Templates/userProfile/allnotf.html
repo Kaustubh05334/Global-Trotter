@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block mymessage %}
+<div class="row">
+    <div class="mb-5 col-lg-6 col-md-9 col-sm-11 col-11 mx-auto" style="margin-top: 10px;">
+        <h1 class="text_color mb-4 text-center">Notifications</h1>
+        {% for notf in notfs %}
+        <div class="d-flex border p-4 my-2 rounded">
+            <h3 class="text_color"><a href="{{notf.link}}" class="Responsive_Font_For_Notifications">{{notf.message}}</a></h3>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} 

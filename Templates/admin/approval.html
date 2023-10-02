@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load filcus %}
+
+{% block mymessage %}
+    <h1 class="text-center text-decoration-underline" style="margin-top: 120px;">Posts Awaiting Approval</h1>
+    <div class="container mx-auto" style='margin-bottom:200px;'>
+      <table class="table table-striped border-3 rounded pb-4 table-hover mt-4 w-100 ">
+        <thead style="background-color:#074b71;">
+          <tr>
+            <th scope="col" style='color:white;font-size: 1.3vw;' class="approval_page_font_size">Serial</th>
+            <th scope="col" style='color:white;font-size: 1.3vw;' class="approval_page_font_size">User Name</th>
+            <th scope="col" style='color:white;font-size: 1.3vw;' class="approval_page_font_size">Location</th>
+            <th scope="col" style='color:white;font-size: 1.3vw;' class="approval_page_font_size">Created On</th>
+            <th scope="col" style='color:white;font-size: 1.3vw;' class="approval_page_font_size">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for post in posts %}
+          <tr class="w-100"> 
+              <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ forloop.counter }}</td>
+              <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ post.user }}</td>
+              <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ post.location }}</td>
+              <td style="font-size: 1.5vw;" class="approval_page_font_size">{{ post.created_at }}</td>
+              <td class="p-0">
+                <a href="{% url 'blog_details' post.title|cuslug post.id %}" class="text-decoration-none text-dark p-0 m-0 approval_page_font_size" style="font-size: 1.4vw;">Read More</a>
+              </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endblock %} 

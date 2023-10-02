@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load filcus %}
+{% load static %}
+{% block mymessage %}
+<div class="row text-center">
+    <div class="col-lg-4 col-md-4 col-sm-11 col-11 border rounded text-center mx-auto m-5">
+        <p class="fs-2 fw-bold">{{ report.blog.title }}</p>
+        <p class="fs-4">Reported by: {{ report.reporter.username }}</p>
+        <p class="fs-4">Report Type: {{ report.report_type }}</p>
+        <p class="fs-4">Reason: {{ report.reason }}</p>
+        <p class="fs-4">Created At: {{ report.created_at }}</p>
+        <a href="{% url 'blog_details' report.blog.title|cuslug report.blog.id %}" class="border rounded p-2">View Blog</a>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="report_id" value="{{ report.id }}">
+            <button type="submit" class="btn btn-primary color_for_buttons my-4">Mark Resolved</button>
+        </form>
+    </div>
+</div>
+{% endblock %} 

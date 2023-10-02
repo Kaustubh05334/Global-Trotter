@@ -1,0 +1,868 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mymessage %}
+      <!-- background-image -->
+     <div class="position-relative" style="height: 500px;">
+        <img src="{% static 'back1.jpg' %}" alt="" class="w-100" style=" object-fit: cover;min-height: 500px;max-height: 550px;" >
+            <h3 class="animate-charcter position-absolute text-center banner_Responsive_text fw-bold" style="font-size: 3vw;top:40%;left: 24%;"> Travel And Share Your Expirence With <br>Global Trotter</h3>
+      </div>
+    <!-- Exclusively Curated: Global Trotter's Mindful Retreats -->
+    <!-- <div class="row g-0 px-5 mb-5 pt-5 mt-3 container mx-auto">
+        <h2 class="mb-4 text_color ms-2">Exclusively Curated: Global Trotter's Mindful Retreats</h2>
+        <div class="container mt-5 pt-5">
+          <div class="row">
+              <div class="col-12">
+                  <div id="events" class="event-list owl-carousel owl-loaded owl-drag">
+                      <div class="owl-stage-outer">
+                          <div class="owl-stage">
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">12</span>
+                                          <div class="event-month-time">
+                                              <span>nov</span>
+                                              <span>13:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Conference meeting</a>
+                                      <p class="event-content">ERP system conference in Canada team</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Tommy C</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Alison G</b>">
+                                              <span class="event-user-inital text-primary">AG</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Brad P</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Saun K</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+40</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item featured">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">20</span>
+                                          <div class="event-month-time">
+                                              <span>nov</span>
+                                              <span>18:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Cocktail party</a>
+                                      <p class="event-content">Cocktail party with +One management</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Keith J</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Massi J</b>">
+                                              <span class="event-user-inital text-primary">MS</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Lex L</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Sam R</b>">
+                                              <span class="event-user-inital text-danger">SR</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+99</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">30</span>
+                                          <div class="event-month-time">
+                                              <span>dec</span>
+                                              <span>22:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Review house infra</a>
+                                      <p class="event-content">Invitation from Axiom Infra Inc. for project</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Antonio J</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Ronald M</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Lucy P</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Sam W</b>">
+                                              <span class="event-user-inital text-danger">SW</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+60</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">8</span>
+                                          <div class="event-month-time">
+                                              <span>jan</span>
+                                              <span>15:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Dinner Meet</a>
+                                      <p class="event-content">Dinner with Microsoft chief managers</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user bg-soft-success" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Alex K</b>">
+                                              <span class="event-user-inital text-success">AK</span>
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Don Jasua</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-warning" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Becka Jasua</b>">
+                                              <span class="event-user-inital text-warning">BC</span>
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Max C</b>">
+                                              <span class="event-user-inital text-danger">MC</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+80</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item active" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">28</span>
+                                          <div class="event-month-time">
+                                              <span>oct</span>
+                                              <span>20:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Hire Developer</a>
+                                      <p class="event-content">Meeting is scheduled to hire developer</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user bg-soft-success" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>Camron D</b>">
+                                              <span class="event-user-inital text-success">CD</span>
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>Pam A</b>">
+                                              <span class="event-user-inital text-primary">PA</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>William S</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>Ron M</b>">
+                                              <span class="event-user-inital text-danger">RM</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+30</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item active" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">12</span>
+                                          <div class="event-month-time">
+                                              <span>nov</span>
+                                              <span>13:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Conference meeting</a>
+                                      <p class="event-content">ERP system conference in Canada team</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Tommy C</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Alison G</b>">
+                                              <span class="event-user-inital text-primary">AG</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Brad P</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Saun K</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+40</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item active" style="width: 374.5px;">
+                                  <div class="event-item featured">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">20</span>
+                                          <div class="event-month-time">
+                                              <span>nov</span>
+                                              <span>18:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Cocktail party</a>
+                                      <p class="event-content">Cocktail party with +One management</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Keith J</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Massi J</b>">
+                                              <span class="event-user-inital text-primary">MS</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Lex L</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Sam R</b>">
+                                              <span class="event-user-inital text-danger">SR</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+99</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item active" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">30</span>
+                                          <div class="event-month-time">
+                                              <span>dec</span>
+                                              <span>22:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Review house infra</a>
+                                      <p class="event-content">Invitation from Axiom Infra Inc. for project</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Antonio J</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Ronald M</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Lucy P</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Sam W</b>">
+                                              <span class="event-user-inital text-danger">SW</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+60</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                              class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">8</span>
+                                          <div class="event-month-time">
+                                              <span>jan</span>
+                                              <span>15:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Dinner Meet</a>
+                                      <p class="event-content">Dinner with Microsoft chief managers</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user bg-soft-success" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Alex K</b>">
+                                              <span class="event-user-inital text-success">AK</span>
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Don Jasua</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-warning" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Becka Jasua</b>">
+                                              <span class="event-user-inital text-warning">BC</span>
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Max C</b>">
+                                              <span class="event-user-inital text-danger">MC</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+80</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">28</span>
+                                          <div class="event-month-time">
+                                              <span>oct</span>
+                                              <span>20:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Hire Developer</a>
+                                      <p class="event-content">Meeting is scheduled to hire developer</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user bg-soft-success" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>Camron D</b>">
+                                              <span class="event-user-inital text-success">CD</span>
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>Pam A</b>">
+                                              <span class="event-user-inital text-primary">PA</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>William S</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-skin-class="tooltip-base" data-html="true" data-placement="top" title="" data-original-title="<b>Ron M</b>">
+                                              <span class="event-user-inital text-danger">RM</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+30</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">12</span>
+                                          <div class="event-month-time">
+                                              <span>nov</span>
+                                              <span>13:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Conference meeting</a>
+                                      <p class="event-content">ERP system conference in Canada team</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Tommy C</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Alison G</b>">
+                                              <span class="event-user-inital text-primary">AG</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Brad P</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Saun K</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+40</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item featured">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">20</span>
+                                          <div class="event-month-time">
+                                              <span>nov</span>
+                                              <span>18:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Cocktail party</a>
+                                      <p class="event-content">Cocktail party with +One management</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Keith J</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-primary" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Massi J</b>">
+                                              <span class="event-user-inital text-primary">MS</span>
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Lex L</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Sam R</b>">
+                                              <span class="event-user-inital text-danger">SR</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+99</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="owl-item cloned" style="width: 374.5px;">
+                                  <div class="event-item">
+                                      <div class="event-schedule">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar event-icon">
+                                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                                          </svg>
+                                          <span class="event-day">30</span>
+                                          <div class="event-month-time">
+                                              <span>dec</span>
+                                              <span>22:00</span>
+                                          </div>
+                                      </div>
+                                      <a href="#" class="event-title">Review house infra</a>
+                                      <p class="event-content">Invitation from Axiom Infra Inc. for project</p>
+                                      <ul class="event-participants">
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Antonio J</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Ronald M</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Lucy P</b>">
+                                              <img class="event-user-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Pic" />
+                                          </li>
+                                          <li class="event-user bg-soft-danger" data-toggle="tooltip" data-placement="top" data-skin-class="tooltip-base" data-html="true" title="" data-original-title="<b>Sam W</b>">
+                                              <span class="event-user-inital text-danger">SW</span>
+                                          </li>
+                                          <li class="event-user bg-soft-info" data-original-title="" title="">
+                                              <span class="event-user-inital text-dark">+60</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="owl-nav">
+                          <button type="button" role="presentation" class="owl-prev">
+                              <div class="owl-nav-wrapper bg-soft-primary">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left text-primary">
+                                      <polyline points="15 18 9 12 15 6"></polyline>
+                                  </svg>
+                              </div>
+                          </button>
+                          <button type="button" role="presentation" class="owl-next">
+                              <div class="owl-nav-wrapper bg-soft-primary">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right text-primary">
+                                      <polyline points="9 18 15 12 9 6"></polyline>
+                                  </svg>
+                              </div>
+                          </button>
+                      </div>
+                      <div class="owl-dots disabled"></div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div> -->
+    <!-- End Of Exclusively Curated: Global Trotter's Mindful Retreats -->
+
+     <!-- In the Spotlight -->
+     <div class="container-lg mx-auto row pt-4 mt-5 justify-content-center">
+          <h2 class="w-100 py-2 text_color" style="font-size: 28px;font-weight: 700;">In the Spotlight</h2>
+      <!-- Card -->
+      <div class="  pt-3 pb-2 my-1 card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border:none;">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h7 class="card-text fw-bold "style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor.</h7>
+            <p class="card-title" style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste omnis est nam dolore </p>
+          </div>
+        </div>
+      <div class="  pt-3 pb-2 my-1 card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border:none;">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h7 class="card-text fw-bold "style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor.</h7>
+            <p class="card-title" style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste omnis est nam dolore </p>
+          </div>
+        </div>
+      <div class="  pt-3 pb-2 my-1 card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border:none;">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h7 class="card-text fw-bold "style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor.</h7>
+            <p class="card-title" style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste omnis est nam dolore </p>
+          </div>
+        </div>
+      <div class="  pt-3 pb-2 my-1 card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border:none;">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h7 class="card-text fw-bold "style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor.</h7>
+            <p class="card-title" style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste omnis est nam dolore </p>
+          </div>
+        </div>
+      <div class="  pt-3 pb-2 my-1 card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border:none;">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h7 class="card-text fw-bold "style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor.</h7>
+            <p class="card-title" style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste omnis est nam dolore </p>
+          </div>
+        </div>
+      <div class="  pt-3 pb-2 my-1 card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border: none;">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h5 class="card-text"style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor.</h5>
+            <p class="card-title"style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus rem voluptatibus ducimus </p>
+          </div>
+        </div>
+      <div class="  pt-3 pb-2 my-1  card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border: none;">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h5 class="card-text"style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor.</h5>
+            <p class="card-title"style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, consequuntur.</p>
+          </div>
+        </div>
+      <div class="  pt-3 pb-2 my-1 card col-lg-3 col-md-6 col-sm-6 mx-auto" style="width: 300px;border: none;">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="px-2 card-body p-0 pt-2">
+            <h5 class="card-text"style="color: #f63;font-size: 12px;font-weight: 700;">Lorem, ipsum dolor. </h5>
+            <p class="card-title"style="font-size: 18px;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;font-weight: 600;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum exercitationem sint voluptas </p>
+          </div>
+        </div>
+    </div>
+
+    <!-- Coresol -->
+    <!-- <div id="carouselExampleControls" class="carousel slide container-lg mx-auto rounded my-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1682060130_homepage_banner.jpg.webp" class="d-block w-100 rounded" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/1516992/Image/1676025478_van_gogh_bannner.jpg.webp" class="d-block w-100 rounded" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1683792261_autoscroll_banner.jpg.webp" class="d-block w-100 rounded" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+
+    <!-- Find Best Places to Visit in India in May & June -->
+    <!-- <div class="container-lg mx-auto row mb-4">
+      <h2 class="w-100 py-2 text_color" style="font-size: 28px;font-weight: 700;">Find Best Places to Visit in India in May & June</h2> -->
+      <!-- Card -->
+      <!-- <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="ms-2 card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+    </div> -->
+    <!-- Himachal Pradesh -->
+    <!-- <div class="container-lg mx-auto py-3">
+      <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/2215463/Image/1683008941_himachal.jpg.webp" alt="" width="100%" class="rounded">
+    </div> -->
+
+    <!-- Find Best Places to Visit in India in May & June-->
+    <!-- <h2 class="w-100 py-2 text_color" style="font-size: 36px;">Find Best Places to Visit in India in May & June</h2>
+    <div class="my-4"> -->
+      <!-- Card -->
+      <!-- <div class=" pt-3 pb-2 my-1  card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title "style="font-size: 18px;font-weight: 700;">Lorem ipsum dolor sit.</h5>
+        </div>
+      </div>
+    <div class=" pt-3 pb-2 my-1  card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title "style="font-size: 18px;font-weight: 700;">Lorem ipsum dolor sit amet.</h5>
+        </div>
+      </div>
+    <div class="  pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit.</h5>
+        </div>
+      </div>
+    <div class=" pt-3 pb-2 my-1  card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur.</h5>
+        </div>
+      </div>
+    <div class="  pt-3 pb-2 my-1  card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title"style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur.</h5>
+        </div>
+      </div>
+    <div class="  pt-3 pb-2 my-1  card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet.</h5>
+        </div>
+      </div>
+    <div class="  pt-3 pb-2 my-1  card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet.</h5>
+        </div>
+      </div>
+    <div class="  pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+          <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+        <div class="card-body p-0 pt-3">
+          <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet.</h5>
+        </div>
+      </div>
+    </div> -->
+
+   
+    <!-- Plan You Next International Trip During May & June -->
+    <div class="container-lg mx-auto row mb-4 justify-content-center"> 
+        <h2 class="w-100 py-2 text_color" style="font-size: 28px;font-weight: 700;">Plan You Next International Trip During May & June</h2>
+      <!-- Card -->
+        <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+        <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+        <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+        <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+        <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+      <div class="pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+      <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+      <div class="pt-3 pb-2  my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+      <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title"style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+      <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+      <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+
+          </div>
+        </div>
+      <div class=" pt-3 pb-2 my-1 card" style="width: 300px;border:none">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIsA0QMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAER/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOxkQBrVZXQUSVQFQBRAFEAURQAQFEAVAABAA1LQXUQAVAEVAFVlQU1AGlZAaGVBRNNBRNNBRNNBRNSgpUANNQBUAAQAEABFBRAFVAFAAVAFEAUQBRAFQAAABAAEBUAAQAVAFAAVAFABRAFAAAAAABAVAABAVAAQoAACKiwBUUAAFAAAAAAAAAAAAAAQAAKCAACACoAoigoQAVAFAAAAAAAABAUQAAAQAAQAAEWIsAVAFVAFEUAAFEAUQAAAAAAAQAAQFQQAABWVBRFAVAFAAABRAFEAUQBUAAAAQAAAQAAQEiosBRFBRFgAAKIAoiwACABUBRAAAAKgAFAQANEAf//Z"  width="100%" height="190px" class="rounded"  alt="...">
+        <h3 style="position: absolute;top: 90px; left: 25%;" class="text_color">Global Trotter</h3>
+          <div class="card-body p-0 pt-3">
+            <h5 class="card-title "style="font-size: 18px;font-weight: 700;font-family: circularairpro-bold,Helvetica,Arial,sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p class="card-text" style="font-size: 14px;">By <a href="#" class="text-decoration-none fw-bold" style="color: #1c70a2!important;">Lorem, ipsumsit.</a></p>
+          </div>
+        </div>
+    </div>
+    <!-- End Of Home Page -->
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+        const cards = document.querySelectorAll('#crd');
+        let activeCard = 0;
+  
+        function rotateCards() {
+          // Set the current card as inactive
+          cards[activeCard].classList.remove('active');
+  
+          // Move to the next card
+          activeCard++;
+  
+          // If we've gone past the last card, loop back to the first card
+          if (activeCard === cards.length) {
+            activeCard = 0;
+          }
+  
+          // Set the new card as active
+          cards[activeCard].classList.add('active');
+        }
+  
+        // Start rotating the cards every 3 seconds
+        setInterval(rotateCards, 1000);
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#myCarousel').carousel({
+          interval: 3000,
+          wrap: true,
+          keyboard: true
+        });
+        
+        $('.carousel-control-prev').click(function() {
+          $('#myCarousel').carousel('prev');
+        });
+        
+        $('.carousel-control-next').click(function() {
+          $('#myCarousel').carousel('next');
+        });
+      });
+      
+    </script>
+    <script>
+      (function($) {
+        'use strict';
+        $(function () {
+            //Event carousel
+            $("#events").owlCarousel({
+                loop:true,
+                margin:0,
+                autoPlay: 3000,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:2
+                    },
+                    979:{
+                        items:3
+                    },
+                    1199:{
+                        items:4
+                    }
+                },
+                singleItem : false,
+                dots: false,
+                nav: true,
+                navText : ["",""]
+            });
+            $(".btn-event-show").collapse();
+            //Events: Tooltip
+            $('.event-user').tooltip({ boundary: 'window' });
+            feather.replace();
+        });
+    })(jQuery); 
+    </script>
+{% endblock %} 

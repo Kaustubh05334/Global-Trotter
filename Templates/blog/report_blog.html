@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block mymessage %}
+    <div class='text-center  row mx-auto mt-5 '>
+        <h1 class="mt-5 pt-5">Report Blog</h1>
+        <form method="post"class="col-lg-6 col-md-9 col-sm-11 col-11 border rounded pt-2 mb-4 mx-auto">
+            {% csrf_token %}
+            <div class="mt-4">{{ form.report_type }}</div>
+            <div class="mt-4">{{ form.reason }}</div>
+            <input type="submit" value="Submit" class="btn btn-primary color_for_buttons w-50 mt-3 mb-4">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block mymessage %}
+    <div class="mx-auto pb-3 row" style="margin-top: 10px;">
+        <h2 class="text-center">Welcome, {{ profile.user.username }}</h2>
+        <h3 class="text-center">Edit Your Profile</h3>
+        <form method="post" enctype="multipart/form-data" class="border rounded p-4 mx-auto col-lg-6 bol-md-9 colsm-11 col-11">
+            {% csrf_token %}
+            {% if profile.profile_image %}
+            <!-- <img src="{{ profile.profile_image.url }}" alt="Profile Picture" class="profile-image"> -->
+            <div class="border rounded-circle mx-auto"style="width:170px;height:170px;">
+                <img src="{{ profile.profile_image.url }}" width="100%" height="100%" alt="Profile Picture" style="border-radius: 60%; object-fit: cover;">
+            </div>
+            {% endif %}
+            <!-- Instagram Link -->
+            <div class="form-group">
+                <label for="instagram_link">Instagram Link:</label>
+                <input type="url" class="form-control" name="instagram_link"
+                    value="{{ profile.instagram_link|default:'' }}">
+            </div>
+            <!-- Facebook Link -->
+            <div class="form-group">
+                <label for="facebook_link">Facebook Link:</label>
+                <input type='url' class="form-control" name="facebook_link"
+                    value="{{ profile.facebook_link|default:'' }}">
+            </div>
+            <!-- Mobile Number -->
+            <div class="form-group">
+                <label for="mobile_number">Mobile Number:</label>
+                <input type="number" class="form-control" name="mobile_number"
+                    value="{{ profile.mobile_number|default:'' }}">
+            </div>
+            <!-- User Bio -->
+            <div class="form-group">
+                <label for="user_bio">User Bio:</label>
+                <textarea class="form-control" name="user_bio">{{ profile.user_bio|default:'' }}</textarea>
+            </div>
+              <!-- Profile Picture -->
+            <div class="form-group">
+                <label for="profile_pic">Profile Picture:</label>
+                <input type="file" class="form-control" name="profile_image"
+                    value="{{ profile.profile_image|default:'' }}">    
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary color_for_buttons">Update Profile</button>
+            </div>
+        </form>          
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+{% endblock %} 
